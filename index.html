@@ -21,11 +21,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
     		var socket = io();
-
-    	//	socket.emit('joining msg', name);
-
     		$('form').submit(function(e) {
-    			e.preventDefault();            // will prevent page reloading
+    			// prevents page from reloading
+                e.preventDefault();
       			socket.emit('chat message', (name + ':  ' + $('#m').val()));
                         $('#messages').append($('<p id="list">').text('You:  ' + $('#m').val()));
       			$('#m').val('');
