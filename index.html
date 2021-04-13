@@ -24,7 +24,7 @@
     	$('form').submit(function(e) {
     		// prevents page from reloading
             e.preventDefault();
-  			socket.emit('chat message', (name + ':  ' + $('#m').val()));
+  		socket.emit('chat message', (name + ':  ' + $('#m').val()));
             $('#messages').append($('<p id="list">').text('You:  ' + $('#m').val()));
       	 $('#m').val('');
       		return false;
