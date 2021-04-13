@@ -26,7 +26,7 @@
             e.preventDefault();
   			socket.emit('chat message', (name + ':  ' + $('#m').val()));
             $('#messages').append($('<p id="list">').text('You:  ' + $('#m').val()));
-      		$('#m').val('');
+      	 $('#m').val('');
       		return false;
     	});
     	socket.on('chat message', function(msg){
